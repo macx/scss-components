@@ -21,6 +21,9 @@ Dependencies
 * Sass
 * Compass
 
+How-To
+===============
+
 ## Mixins
 
 ### Clearfix
@@ -100,15 +103,40 @@ The time is over to write for each mediaquery the pixel. You can write something
       @content;
     }
 
+## Example of a config-file
+I use for these configuration a _config.scss, which has all the configurations and variables for the project.
 
-How-To
-===============
+    // Array for icons
+    $icons: (
+      'css' 'a',
+      'briefcase' 'b',
+      'apple' 'c',
+      'html' 'd',
+      'happy-smiley' 'e',
+      'home' 'f'
+    );
 
-### Install package via bower
+    // Breakpoints and Widths
+    $max-wrapper-width: 920px;
+    $max-cols: 12;
+    $gutter-width: 2%;
+    $breakpoints: (
+      'mobile-landscape' 480px,
+      'smaller-tablet' 600px,
+      'tablet' 768px,
+      'tablet-landscape' $max-wrapper-width,
+      'desktop' 1200px
+    );
+
+    // Fonts
+    $base-font-family: Helvetica, Arial, sans-serif;
+    $base-font-size: 1.6
+
+## Bower
 
     bower install scss-components
 
-### Fork it and help to make it bigger
+## Grunt
 
 **Install all dependencies**
 
