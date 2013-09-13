@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+// Icons
+[data-icon]:before {
+  font-family: "scss-components";
+  content: attr(data-icon);
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none !important;
+  speak: none;
+  display: inline-block;
+  text-decoration: none;
+  width: 1em;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+}
+
+[class^="icon--"]:before,
+[class*=" icon--"]:before {
+  font-family: "scss-components";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none !important;
+  speak: none;
+  display: inline-block;
+  text-decoration: none;
+  width: 1em;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+}
+
+// Create each icons, which you define in the array
+@each $icon in $icons {
+  $name: nth($icon, 1);
+  .icon--#{$name} {
+    @include icon('before', $name);
+  }
+}

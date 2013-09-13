@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+// Creating a column
+// Define your $max-cols in your variables
+// Use border-box
+@mixin col($col, $max-cols: 12) {
+  width: (100%/$max-cols)*$col;
+}

@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+// Array for icons
+$icons: (
+  'css' 'a',
+  'briefcase' 'b',
+  'apple' 'c',
+  'html' 'd',
+  'happy-smiley' 'e',
+  'home' 'f'
+);
+
+// Breakpoints and Widths
+$max-wrapper-width: 920px;
+$max-cols: 12;
+$gutter-width: 2%;
+$breakpoints: (
+  'mobile-landscape' 480px,
+  'smaller-tablet' 600px,
+  'tablet' 768px,
+  'tablet-landscape' $max-wrapper-width,
+  'desktop' 1200px
+);
+
+// Fonts
+$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-size: 1.6
