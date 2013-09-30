@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+// Vendor
+@import '../../../src/components';
+
+// Base
+@import '_base/_config';
+
+// Layouts
+@import '_layouts/_l-grid',
+        '_layouts/_l-default';

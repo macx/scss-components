@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+.l-matter {
+  @include respond-to('tablet') {
+    width: 50%;
+  }
+}
+.l-sidebar {
+  @include respond-to('tablet') {
+    width: 50%;
+  }
+}

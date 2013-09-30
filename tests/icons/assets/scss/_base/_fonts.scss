@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+// Fonts
+@include font-face("scss-components", "../fonts/scss-components") {
+  font-weight: normal;
+  font-style: normal;
+};
