@@ -6,7 +6,7 @@ module.exports = function(grunt) {
         livereload: true
       },
       files: [
-        'tests/assets/**'
+        'tests/**'
       ],
       tasks: ['default']
     },
@@ -19,8 +19,9 @@ module.exports = function(grunt) {
         files: [
           {
             expanded: true,
-            src: ['tests/assets/scss/application.scss'],
-            dest: 'tests/assets/stylesheets/application.css',
+            cwd: 'tests/*',
+            src: ['assets/scss/application.scss'],
+            dest: 'assets/stylesheets/application.css',
             filter: 'isFile'
           }
         ]
