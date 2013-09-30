@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+// Fallback for SVG as background-image
+@mixin svg-fallback($url) {
+  background-image: url($url);
+  background-image: none, url($url);
+}
