@@ -1,7 +1,8 @@
 @charset "UTF-8";
 
 // Fallback for SVG as background-image
+// Add your url without file-format
 @mixin svg-fallback($url) {
-  background-image: url($url);
-  background-image: none, url($url);
+  background-image: url($url + '.png');
+  background-image: url($url + '.svg'), none;
 }
