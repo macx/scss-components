@@ -1,12 +1,11 @@
 @charset "UTF-8";
 
 // Animation
-@mixin animation($name, $duration, $iteration-count, $direction) {
-  -webkit-animation: $name $duration $iteration-count $direction;
-     -moz-animation: $name $duration $iteration-count $direction;
-          animation: $name $duration $iteration-count $direction;
+@mixin animation($params) {
+  -webkit-animation: #{$params};
+     -moz-animation: #{$params};
+          animation: #{$params};
 }
-
 
 // Delay
 @mixin animation-delay($delay) {
@@ -57,7 +56,7 @@
           animation-timing-function: $timing-function;
 }
 
-// Timing-Function
+// Animation-Fill-Mode
 @mixin animation-fill-mode($fill-mode) {
   -webkit-animation-fill-mode: $fill-mode;
      -moz-animation-fill-mode: $fill-mode;
