@@ -16,14 +16,12 @@ module.exports = function(grunt) {
           style: 'expanded',
           compass: true
         },
-        files: [
-          {
-            expanded: true,
-            src: ['tests/assets/scss/application.scss'],
-            dest: 'tests/assets/stylesheets/application.css',
-            filter: 'isFile'
-          }
-        ]
+        files: {
+          'tests/animations/assets/stylesheets/application.css' : 'tests/animations/assets/scss/application.scss',
+          'tests/completions/assets/stylesheets/application.css' : 'tests/completions/assets/scss/application.scss',
+          'tests/grid/assets/stylesheets/application.css' : 'tests/grid/assets/scss/application.scss',
+          'tests/icons/assets/stylesheets/application.css' : 'tests/icons/assets/scss/application.scss'
+        }
       }
     },
     bumpup: ['package.json', 'bower.json'],
