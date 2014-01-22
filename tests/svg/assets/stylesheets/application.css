@@ -1,0 +1,8 @@
+.l-logo {
+  display: block;
+  height: 79px;
+  width: 842px;
+  background-image: url("../images/neoskop-logo.png");
+  background-image: url("../images/neoskop-logo.svg"), none;
+  background-repeat: no-repeat;
+}

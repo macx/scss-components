@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+.l-logo {
+  display: block;
+  height: 79px;
+  width: 842px;
+  @include svg-fallback('../images/neoskop-logo', 'png') {
+    background-repeat: no-repeat;
+  }
+}
