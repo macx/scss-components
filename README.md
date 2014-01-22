@@ -55,6 +55,32 @@ It was never so easy to create your own responsive grid and you are so flexible.
     .l-u--2-4 // two fourth of
 
 
+    // Push your column
+    @for $sum from 1 through $max-cols {
+      @for $i from 1 through $sum {
+        .l-u--push-#{$i}-#{$sum} {
+          @include col-push($i, $sum);
+        }
+      }
+    }
+
+    // Result like this
+    .l-u--push-1-3 // One third of (margin-left)
+
+
+    // Pull your column
+    @for $sum from 1 through $max-cols {
+      @for $i from 1 through $sum {
+        .l-u--pull-#{$i}-#{$sum} {
+          @include col-push($i, $sum);
+        }
+      }
+    }
+
+    // Result like this
+    .l-u--pull-1-3 // One third of (minus margin-left)
+
+
     // Other example for a grid
     @for $i from 1 through $max-cols {
       .l-col--#{$i} {
@@ -108,10 +134,10 @@ The time is over to write for each mediaquery the pixel. You can write something
     }
 
 ### SVG
-It's not easy to use - some browsers can't to handle it. Because of this we must use a fallback.
+It's not easy to use - some browsers can't handle it. Because of this we must use a fallback.
 
     // Mixin for SVG-Fallback
-    // First parameter ist for the url without file-format, second for file-format
+    // First parameter is for the url without file-format, second for file-format
     @include svg-fallback('assets/img/fallback', 'jpg');
 
 ### Helper-Mixins
