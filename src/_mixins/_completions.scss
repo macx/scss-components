@@ -10,10 +10,10 @@
 }
 
 // User-Select
-@mixin user-select {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-       -o-user-select: none;
-          user-select: none;
+@mixin user-select($value) {
+  -webkit-user-select: $value;
+     -moz-user-select: $value;
+      -ms-user-select: $value;
+       -o-user-select: $value;
+          user-select: $value;
 }
