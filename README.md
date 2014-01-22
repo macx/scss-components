@@ -12,6 +12,10 @@ Dependencies
 * Simple including your icons
 * Naming breakpoints for each mediaquery which you want
 * CSS-Triangle
+* SVG-Fallback
+* Crossbrowser-Flexbox
+* Crossbrowser-Animations
+* Helper-Mixins (Placeholder, User-Select etc.)
 
 Dependencies
 ===============
@@ -102,6 +106,26 @@ The time is over to write for each mediaquery the pixel. You can write something
     @include triangle($direction, $size, $color) {
       @content;
     }
+
+### SVG
+It's not easy to use - some browsers can't to handle it. Because of this we must use a fallback.
+
+    // Mixin for SVG-Fallback
+    // First parameter ist for the url without file-format, second for file-format
+    @include svg-fallback('assets/img/fallback', 'jpg');
+
+### Helper-Mixins
+Some things are really pain in the ass. I will give you some helpers, which compass doesn't have.
+
+    // Placeholder
+    // Give placeholder a styling (Cross-Browser)
+    @include placeholder() {
+      color: red;
+    }
+
+    // User-Select
+    // Cross-Browser - Define your type
+    @include user-select('none');
 
 ## Example of a config-file
 I use for these configuration a _config.scss, which has all the configurations and variables for the project.
