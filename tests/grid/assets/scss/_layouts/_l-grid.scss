@@ -16,7 +16,12 @@
   padding-left: 2%;
 }
 
-// Create units
+
+//
+// GRID FOR DIFFERENT SCREEN-SIZES
+//
+
+// Mobile
 @for $sum from 1 through $max-cols {
   @for $i from 1 through $sum {
     .l-u--#{$i}-#{$sum} {
@@ -25,8 +30,108 @@
   }
 }
 
+// Mobile-Landscape
+@for $sum from 1 through $max-cols {
+  @for $i from 1 through $sum {
+    .l-u--medium-#{$i}-#{$sum} {
+      @include respond-to('mobile-landscape') {
+        @include col($i, $sum);
+      }
+    }
+  }
+}
+
+// Tablet
+@for $sum from 1 through $max-cols {
+  @for $i from 1 through $sum {
+    .l-u--large-#{$i}-#{$sum} {
+      @include respond-to('tablet') {
+        @include col($i, $sum);
+      }
+    }
+  }
+}
+
+
+//
+// YOUR ARE FLEXIBLE WITH YOUR CLASSNAMES
+//
+
+// Example
 @for $i from 1 through $max-cols {
   .l-col--#{$i} {
     @include col($i, $max-cols)
+  }
+}
+
+
+//
+// PUSH COLS ON DIFFERENT SCREEN-SIZES
+//
+
+// Mobile
+@for $sum from 1 through $max-cols {
+  @for $i from 1 through $sum {
+    .l-u--push-#{$i}-#{$sum} {
+      @include col-push($i, $sum);
+    }
+  }
+}
+
+// Mobile-Landscape
+@for $sum from 1 through $max-cols {
+  @for $i from 1 through $sum {
+    .l-u--push--medium-#{$i}-#{$sum} {
+      @include respond-to('mobile-landscape') {
+        @include col-push($i, $sum);
+      }
+    }
+  }
+}
+
+// Tablet
+@for $sum from 1 through $max-cols {
+  @for $i from 1 through $sum {
+    .l-u--push--large-#{$i}-#{$sum} {
+      @include respond-to('tablet') {
+        @include col-push($i, $sum);
+      }
+    }
+  }
+}
+
+
+//
+// PULL COLS ON DIFFERENT SCREEN-SIZES
+//
+
+// Mobile
+@for $sum from 1 through $max-cols {
+  @for $i from 1 through $sum {
+    .l-u--pull-#{$i}-#{$sum} {
+      @include col-pull($i, $sum);
+    }
+  }
+}
+
+// Mobile-Landscape
+@for $sum from 1 through $max-cols {
+  @for $i from 1 through $sum {
+    .l-u--pull--medium-#{$i}-#{$sum} {
+      @include respond-to('mobile-landscape') {
+        @include col-pull($i, $sum);
+      }
+    }
+  }
+}
+
+// Tablet
+@for $sum from 1 through $max-cols {
+  @for $i from 1 through $sum {
+    .l-u--pull--large-#{$i}-#{$sum} {
+      @include respond-to('tablet') {
+        @include col-pull($i, $sum);
+      }
+    }
   }
 }
