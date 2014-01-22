@@ -2,7 +2,9 @@
 
 // Fallback for SVG as background-image
 // Add your url without file-format
-@mixin svg-fallback($url) {
-  background-image: url($url + '.png');
+@mixin svg-fallback($url, $file-format) {
+  background-image: url($url + '.' + $file-format);
   background-image: url($url + '.svg'), none;
+
+  @content;
 }
