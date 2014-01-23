@@ -3,7 +3,7 @@ SCSS-Components
 
 A package which includes much components and helpers for Scss.
 
-Dependencies
+Features
 ===============
 
 * Create a grid
