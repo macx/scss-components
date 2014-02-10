@@ -103,14 +103,14 @@ Create the font-size not only in pixels. Use "rem" too.
 It's easy to get some icons. You must only set an array in your config and include the mixin.
 
     // Create the array
-    $icons: {
+    $icons: (
       'css' 'a',
       'briefcase' 'b',
       'apple' 'c',
       'html' 'd',
       'happy-smiley' 'e',
       'home' 'f'
-    }
+    );
 
     // Mixin to create a class for each icon,
     // ".icon--" is your prefix and use 'before' or 'after'
