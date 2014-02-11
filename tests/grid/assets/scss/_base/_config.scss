@@ -1,13 +1,13 @@
 @charset "UTF-8";
 
 // Breakpoints and Widths
-$max-wrapper-width: 920px;
+$max-wrapper-width: 1200px;
 $max-cols: 12;
 $gutter-width: 2%;
 $breakpoints: (
   'mobile-landscape' 480px,
   'smaller-tablet' 600px,
   'tablet' 768px,
-  'tablet-landscape' $max-wrapper-width,
-  'desktop' 1200px
+  'tablet-landscape' 920px,
+  'desktop' $max-wrapper-width
 );
